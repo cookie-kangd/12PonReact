@@ -24,7 +24,11 @@ module.exports = {
   plugins: ['react', '@typescript-eslint'],
   rules: {
     quotes: [2, 'single'],
-    semi: 0
+    semi: 0,
+    '@typescript-eslint/no-unused-vars': ['off'],
+    '@typescript-eslint/no-explicit-any': ['off'],
+    '@typescript-eslint/no-empty-function': ['off'],
+    '@typescript-eslint/no-var-requires': ['off']
   },
   settings: {
     'import/ignore': ['node_modules'],

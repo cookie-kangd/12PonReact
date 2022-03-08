@@ -1,43 +1,37 @@
-import React, { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React, { useEffect } from 'react'
+import { growCardList } from './data'
+import { Card } from 'antd'
+import { query } from '@/api/index'
+import api from '../public/api.json'
 
 function App() {
-  const [count, setCount] = useState(0)
+  useEffect(() => {
+    console.log(api)
+    return () => {}
+  }, [])
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div className="container w-full h-screen flex">
+      <div className="w-11/12 mx-auto flex flex-row flex-wrap m-10">
+        {growCardList.map((item: any, index: number) => {
+          return (
+            <Card key={index} className="w-17rem h-11rem ml-2" size="small" hoverable>
+              <div className="flex" style={{ justifyContent: 'center' }}>
+                <img width={80} height={100} src={'../src/assets/' + item.icon + '.jpg'} />
+              </div>
+              <div className="flex font-semibold" style={{ justifyContent: 'center' }}>
+                <p>{item.title}</p>
+              </div>
+              <div
+                className="flex mt-2 text-green-600 font-bold"
+                style={{ justifyContent: 'center' }}
+              >
+                <p>{item.price}</p>
+              </div>
+            </Card>
+          )
+        })}
+      </div>
     </div>
   )
 }
