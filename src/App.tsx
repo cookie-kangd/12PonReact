@@ -2,11 +2,9 @@ import React, { useEffect } from 'react'
 import { growCardList } from './data'
 import { Card } from 'antd'
 import { query } from '@/api/index'
-import api from '../public/api.json'
 
 function App() {
   useEffect(() => {
-    console.log(api)
     return () => {}
   }, [])
 

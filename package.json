@@ -5,8 +5,7 @@
   "license": "MIT",
   "author": "DK",
   "scripts": {
-    "start": "node src/config/index.js && vite",
-    "dev": "vite",
+    "start": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "prettier": "npx prettier --write .",
