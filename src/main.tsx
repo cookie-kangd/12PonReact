@@ -1,8 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import RouterView from '@/components/RouterView'
 import 'antd/dist/antd.less'
 import './index.css'
-import App from './App'
+import './index.module.less'
+// 全局例子背景特效
+import ParticlesBg from 'particles-bg'
 
 // windicss layers
 import 'virtual:windi-base.css'
@@ -13,8 +16,9 @@ import 'virtual:windi-utilities.css'
 import 'virtual:windi-devtools'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <>
+    <ParticlesBg type="square" bg={true}></ParticlesBg>
+    <RouterView />
+  </>,
   document.getElementById('root')
 )

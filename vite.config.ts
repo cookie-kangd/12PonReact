@@ -69,10 +69,6 @@ export default defineConfig({
       '/api': {
         target: 'https://www.mxnzp.com/api', //代理接口
         changeOrigin: true,
-        secure: false,
-        headers: {
-          Referer: 'https://www.mxnzp.com/api'
-        },
         rewrite: (path) => path.replace(/^\/api/, '')
       }
     }

@@ -48,8 +48,7 @@ async function getData() {
           return console.error(err)
         }
       })
-    }
-    if (!exists) {
+    } else {
       fs.mkdirSync('public')
     }
   })

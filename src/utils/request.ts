@@ -2,10 +2,16 @@ import axios from 'axios'
 import { message } from 'antd'
 import QS from 'qs'
 
+// 固定app
+const app_id = 'qtemljejmlpvnnql',
+  app_secret = 'WjI1ZjdRUlA3WmQwTHlJeXRMV2xFZz09'
+
 const instance = axios.create({
   timeout: 10000,
   headers: {
-    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+    app_id: app_id,
+    app_secret: app_secret
   }
 })
 

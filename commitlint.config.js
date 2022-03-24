@@ -1,24 +1,24 @@
 ﻿module.exports = {
-  extends: ["cz"],
+  extends: ['cz'],
   rules: {
-    "type-empty": [2, "never"],
-    "type-enum": [
+    'type-empty': [2, 'never'],
+    'type-enum': [
       2,
-      "always",
+      'always',
       [
-        "init",
-        "build",
-        "ci",
-        "chore",
-        "docs",
-        "feat",
-        "fix",
-        "perf",
-        "refactor",
-        "revert",
-        "style",
-        "test",
-      ],
-    ],
-  },
-};
+        'init',
+        'build',
+        'ci',
+        'chore',
+        'docs',
+        'feat',
+        'fix',
+        'perf',
+        'refactor',
+        'revert',
+        'style',
+        'test'
+      ]
+    ]
+  }
+}
