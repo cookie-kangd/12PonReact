@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "prettier": "npx prettier --write .",
     "prepare": "husky install",
-    "commit": "git add . && git-cz && git push origin master",
+    "commit": "git add . && git-cz && git push",
     "lint": "eslint src"
   },
   "dependencies": {

@@ -1,12 +1,16 @@
 # 项目名称
 
-12 宫格聚合工具箱
+**12 宫格聚合工具箱**
+
+---
 
 ## 如何开始
 
-npm install
+`npm install`
 
-npm run start
+`npm run start`
+
+---
 
 ### 技术栈
 
@@ -14,15 +18,21 @@ npm run start
 React + typescript + antd + windicss
 ```
 
+---
+
 ## 作者
 
 - **DK** - _Initial work_ - [12PonReact](https://github.com/cookie-kangd/12PonReact)
 
 See also the list of [contributors](https://github.com/cookie-kangd/12PonReact) who participated in this project.
 
+---
+
 ## 许可
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+---
 
 ## 组件
 
