@@ -8,8 +8,8 @@ module.exports = {
   quoteProps: 'as-needed',
   bracketSpacing: true,
   trailingComma: 'none', // 末尾分号
-  tsxBracketSameLine: false,
-  tsxSingleQuote: false,
+  jsxBracketSameLine: false,
+  jsxSingleQuote: false,
   arrowParens: 'always',
   insertPragma: false,
   requirePragma: false,
