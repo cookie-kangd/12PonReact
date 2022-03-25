@@ -11,7 +11,7 @@ npm run start
 ### 技术栈
 
 ```
-React + typescript + antd
+React + typescript + antd + windicss
 ```
 
 ## 作者
