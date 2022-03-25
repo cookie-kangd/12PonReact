@@ -24,8 +24,17 @@ See also the list of [contributors](https://github.com/cookie-kangd/12PonReact) 
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## 需知
+## 组件
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- 万年历
+- 生成二维码
+- IP 地址
+- 每日搞笑段子
+- 全国天气查询
+- 手机归属地
+- 历史上的今天
+- 简繁转换工具
+- 多语种翻译
+- 汉语词典
+- URL 生成短链接
+- 身份证号查询
