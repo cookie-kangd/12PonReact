@@ -30,7 +30,7 @@ const Holiday: React.FC = () => {
           style={{ justifyContent: 'center', alignItems: 'center' }}
         >
           <Card
-            className="w-full h-11/12 rounded-lg bg-green-500 border-transparent flex"
+            className="w-full h-11/12 rounded-lg bg-transparent border-transparent flex"
             style={{ justifyContent: 'center', alignItems: 'center' }}
           >
             <Descriptions title="万年历">

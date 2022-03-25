@@ -1,20 +1,20 @@
 import React, { useEffect } from 'react'
-import { Card, Button, message, Input, Image } from 'antd'
+import { Card, Descriptions, message, Input, Button } from 'antd'
 import { useSafeState } from 'ahooks'
-import { qrcode } from '@/api'
+import { convert } from '@/api'
 
-const Qrcode: React.FC = () => {
+const Convert: React.FC = () => {
   const [input, setInput] = useSafeState<string>('')
-  const [img, setImg] = useSafeState<string>('')
+  const [data, setData] = useSafeState<any>({})
 
   useEffect(() => {
     return () => {}
   }, [])
 
-  const getImg = () => {
-    qrcode(input).then((res: any) => {
+  const getConvert = () => {
+    convert(input).then((res: any) => {
       if (res.code === 1) {
-        setImg(res.data.qrCodeUrl)
+        setData(res.data)
       } else {
         message.error(res.msg)
       }
@@ -32,22 +32,25 @@ const Qrcode: React.FC = () => {
             className="w-full h-11/12 rounded-lg bg-transparent border-transparent flex"
             style={{ justifyContent: 'center', alignItems: 'center' }}
           >
-            {img && img !== '' ? (
-              <div className="flex mb-5" style={{ justifyContent: 'center' }}>
-                <Image width={200} src={img} alt={input} preview={false} />
-              </div>
+            <div className="flex">
+              <Input
+                placeholder="请输入想要转繁体字的文字"
+                onChange={(e: any) => setInput(e.target.value)}
+              />
+              <Button type="primary" shape="round" className="ml-5" onClick={getConvert}>
+                转换
+              </Button>
+            </div>
+            {data && JSON.stringify(data) !== '{}' ? (
+              <>
+                <Descriptions title="简繁转换" className="mt-12">
+                  <Descriptions.Item label="简体字">{data.originContent}</Descriptions.Item>
+                  <Descriptions.Item label="繁体字">{data.convertContent}</Descriptions.Item>
+                </Descriptions>
+              </>
             ) : (
               ''
             )}
-            <div className="flex">
-              <Input
-                placeholder="请输入想要生成二维码的文字或链接"
-                onChange={(e: any) => setInput(e.target.value)}
-              />
-              <Button type="primary" shape="round" className="ml-5" onClick={getImg}>
-                生成
-              </Button>
-            </div>
           </Card>
         </div>
       </div>
@@ -55,4 +58,4 @@ const Qrcode: React.FC = () => {
   )
 }
 
-export default Qrcode
+export default Convert

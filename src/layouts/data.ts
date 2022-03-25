@@ -73,9 +73,9 @@ export const growCardList: GrowCardItem[] = [
     key: 'shortlink'
   },
   {
-    title: '彩票中奖信息',
+    title: '身份证号查询',
     icon: 'icon_api_12',
     price: '免费',
-    key: 'lottery'
+    key: 'idcard'
   }
 ]

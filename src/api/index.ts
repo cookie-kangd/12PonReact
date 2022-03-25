@@ -55,7 +55,7 @@ export const shortlink = async (parmas: any) => {
   return get(`/api/shortlink/create?url=${parmas}`, '')
 }
 
-// 彩票中奖信息
-export const lottery = async (parmas: any) => {
-  return get(`/api/lottery/common/aim_lottery?expect=${parmas.code}&code=${parmas.type}`, '')
+// 身份证查询
+export const idcard = async (parmas: any) => {
+  return get(`/api/idcard/search?idcard=${parmas}`, '')
 }

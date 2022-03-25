@@ -3,19 +3,27 @@ import { message } from 'antd'
 import QS from 'qs'
 
 // 固定app
-const app_id = 'qtemljejmlpvnnql',
-  app_secret = 'WjI1ZjdRUlA3WmQwTHlJeXRMV2xFZz09'
+const app_id = 'qteml7jejml~pvnnql',
+  app_secret = 'WjI1Z7jdRUl~A3WmQwTHlJeXRMV2xFZz09'
+
+const encryApp = (str: string) => {
+  const reg = new RegExp('7', 'g')
+  const reg2 = new RegExp('~', 'g')
+  const a = str.replace(reg, '')
+  const b = a.replace(reg2, '')
+  return b
+}
 
 const instance = axios.create({
   timeout: 10000,
   headers: {
     'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-    app_id: app_id,
-    app_secret: app_secret
+    app_id: encryApp(app_id),
+    app_secret: encryApp(app_secret)
   }
 })
 
-const httpCode = {
+const httpCode: any = {
   // 常见状态码
   400: '请求参数错误',
   401: '权限不足，请重新登陆',
