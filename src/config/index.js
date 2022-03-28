@@ -42,15 +42,14 @@ async function getData() {
   let str = JSON.stringify(obj, '', '\t')
   // fs模块判断是否存在public文件夹,存在的话直接覆盖重写api文件,不存在的话先创建public文件夹再写api文件
   fs.exists('public', function (exists) {
-    if (exists) {
-      fs.writeFile('public\\api.json', str, function (err) {
-        if (err) {
-          return console.error(err)
-        }
-      })
-    } else {
+    if (!exists) {
       fs.mkdirSync('public')
     }
+    fs.writeFile('public\\api.json', str, function (err) {
+      if (err) {
+        return console.error(err)
+      }
+    })
   })
 }
 
