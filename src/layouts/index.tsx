@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { growCardList } from './data'
 import { Card } from 'antd'
+import usePub from '@/utils/pubUse'
 
 const App: React.FC = (props: any) => {
   useEffect(() => {
@@ -23,7 +24,7 @@ const App: React.FC = (props: any) => {
                 onClick={() => props.history.push('/' + item.key)}
               >
                 <div className="flex" style={{ justifyContent: 'center' }}>
-                  <img width={80} height={100} src={'../src/assets/' + item.icon + '.jpg'} />
+                  <img width={80} height={100} src={usePub('../assets', item.icon + '.jpg')} />
                 </div>
                 <div className="flex font-semibold" style={{ justifyContent: 'center' }}>
                   <p>{item.title}</p>
