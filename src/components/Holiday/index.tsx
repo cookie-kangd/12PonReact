@@ -25,14 +25,8 @@ const Holiday: React.FC = () => {
   return (
     <>
       <div className="container w-full h-screen flex">
-        <div
-          className="w-11/12 mx-auto flex flex-wrap m-4 p-4 rounded-lg"
-          style={{ justifyContent: 'center', alignItems: 'center' }}
-        >
-          <Card
-            className="w-full h-11/12 rounded-lg bg-transparent border-transparent flex"
-            style={{ justifyContent: 'center', alignItems: 'center' }}
-          >
+        <div className="w-11/12 mx-auto flex justify-center items-center flex-wrap m-4 p-4 rounded-lg">
+          <Card className="w-full h-11/12 rounded-lg bg-transparent border-transparent flex justify-center items-center">
             <Descriptions title="万年历">
               <Descriptions.Item label="日期">{data.date}</Descriptions.Item>
               <Descriptions.Item label="星期">{data.weekDay}</Descriptions.Item>

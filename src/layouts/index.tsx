@@ -11,10 +11,7 @@ const App: React.FC = (props: any) => {
   return (
     <>
       <div className="container w-full h-screen flex">
-        <div
-          className="w-11/12 mx-auto flex flex-wrap m-4 p-4 rounded-lg"
-          style={{ justifyContent: 'center', alignItems: 'center' }}
-        >
+        <div className="w-11/12 mx-auto flex justify-center items-center flex-wrap m-4 p-4 rounded-lg">
           {growCardList.map((item: any, index: number) => {
             return (
               <Card
@@ -23,16 +20,13 @@ const App: React.FC = (props: any) => {
                 hoverable
                 onClick={() => props.history.push('/' + item.key)}
               >
-                <div className="flex" style={{ justifyContent: 'center' }}>
+                <div className="flex justify-center">
                   <img width={80} height={100} src={getAssetsFile(item.icon + '.jpg')} />
                 </div>
-                <div className="flex font-semibold" style={{ justifyContent: 'center' }}>
+                <div className="flex justify-center font-semibold">
                   <p>{item.title}</p>
                 </div>
-                <div
-                  className="flex mt-2 text-green-600 font-bold"
-                  style={{ justifyContent: 'center' }}
-                >
+                <div className="flex justify-center mt-2 text-green-600 font-bold">
                   <p>{item.price}</p>
                 </div>
               </Card>

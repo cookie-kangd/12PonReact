@@ -3,10 +3,7 @@ import { Spin } from 'antd'
 
 const Loading: React.FC = () => {
   return (
-    <div
-      className="w-full h-screen flex"
-      style={{ justifyContent: 'center', alignItems: 'center' }}
-    >
+    <div className="w-full h-screen flex justify-center items-center">
       <Spin size="large" />
     </div>
   )

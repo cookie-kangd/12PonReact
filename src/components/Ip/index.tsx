@@ -20,14 +20,8 @@ const Ip: React.FC = () => {
   return (
     <>
       <div className="container w-full h-screen flex">
-        <div
-          className="w-11/12 mx-auto flex flex-wrap m-4 p-4 rounded-lg"
-          style={{ justifyContent: 'center', alignItems: 'center' }}
-        >
-          <Card
-            className="w-full h-11/12 rounded-lg bg-transparent border-transparent flex"
-            style={{ justifyContent: 'center', alignItems: 'center' }}
-          >
+        <div className="w-11/12 mx-auto flex justify-center items-center flex-wrap m-4 p-4 rounded-lg">
+          <Card className="w-full h-11/12 rounded-lg bg-transparent border-transparent flex justify-center items-center">
             <Descriptions title="IP">
               <Descriptions.Item label="IP地址">{data.ip}</Descriptions.Item>
               <Descriptions.Item label="省份">{data.province}</Descriptions.Item>

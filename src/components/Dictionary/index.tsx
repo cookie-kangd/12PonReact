@@ -24,14 +24,8 @@ const Dictionary: React.FC = () => {
   return (
     <>
       <div className="container w-full h-screen flex">
-        <div
-          className="w-11/12 mx-auto flex flex-wrap m-4 p-4 rounded-lg"
-          style={{ justifyContent: 'center', alignItems: 'center' }}
-        >
-          <Card
-            className="w-full h-11/12 rounded-lg bg-transparent border-transparent flex"
-            style={{ justifyContent: 'center', alignItems: 'center' }}
-          >
+        <div className="w-11/12 mx-auto flex justify-center items-center flex-wrap m-4 p-4 rounded-lg">
+          <Card className="w-full h-11/12 rounded-lg bg-transparent border-transparent flex justify-center items-center">
             <div className="flex">
               <Input
                 placeholder="请输入想要查询的汉字"

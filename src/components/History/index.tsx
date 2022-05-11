@@ -40,10 +40,7 @@ const History: React.FC = () => {
   return (
     <>
       <div className="container w-full h-screen flex">
-        <div
-          className="w-11/12 mx-auto flex flex-wrap m-4 p-4 rounded-lg"
-          style={{ justifyContent: 'center', alignItems: 'center' }}
-        >
+        <div className="w-11/12 mx-auto flex justify-center items-center flex-wrap m-4 p-4 rounded-lg">
           <Button type="primary" shape="round" onClick={randemHistory}>
             换一批
           </Button>
@@ -53,13 +50,13 @@ const History: React.FC = () => {
                 key={index}
                 className="w-17rem h-11rem ml-2 rounded-lg mx-12 bg-transparent border-transparent"
               >
-                <div className="flex font-semibold" style={{ justifyContent: 'center' }}>
+                <div className="flex justify-center font-semibold">
                   <Image width={200} src={item.picUrl} alt={item.title} preview={false} />
                 </div>
-                <div className="flex font-semibold" style={{ justifyContent: 'center' }}>
+                <div className="flex justify-center font-semibold">
                   <p>{item.title}</p>
                 </div>
-                <div className="flex font-semibold" style={{ justifyContent: 'center' }}>
+                <div className="flex justify-center font-semibold">
                   <p>{item.year + '-' + item.month + '-' + item.day}</p>
                 </div>
               </Card>
